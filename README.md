@@ -1,11 +1,12 @@
 # Data-Themed Seasons Greetings Cards Generator
 
 <p align="center">
-  <img src="resized_images/resized_design1.png" width="20%" />
+  <img src="resized_images/resized_design1.png" width="30%" />
   <img src="resized_images/resized_design2.png" width="20%" />
-  <img src="resized_images/resized_design3.png" width="20%" />
-  <img src="resized_images/resized_design4.png" width="20%" />
-  <img src="resized_images/resized_design5.png" width="20%" />
+  <img src="resized_images/resized_design3.png" width="30%" />
+  <img src="resized_images/resized_design4.png" width="30%" />
+  <img src="resized_images/resized_design5.png" width="30%" />
+  <img src="resized_images/resized_design6.png" width="30%" />
 </p>
 
 
