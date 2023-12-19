@@ -41,8 +41,6 @@ for name in names_df['Name']:
 
     # Generate postcard
     postcard_pdf = FPDF(unit="mm", format="A5")
-    postcard_pdf.add_page()
-    postcard_pdf.image(image_path, x=0, y=0, w=A5_WIDTH_IN_MM, h=A5_HEIGHT_IN_MM)
     postcard_pdf.add_page()  # Greetings page
     # Add greeting text
     postcard_pdf.set_font("Arial", size=18)
@@ -54,6 +52,9 @@ for name in names_df['Name']:
     postcard_pdf.set_font("Arial", size=18)
     postcard_pdf.set_xy(-40, 170)
     postcard_pdf.cell(0, 10, "From Will", ln=True, align='R')
+    # Add image
+    postcard_pdf.add_page()
+    postcard_pdf.image(image_path, x=0, y=0, w=A5_WIDTH_IN_MM, h=A5_HEIGHT_IN_MM)
     # Save postcard
     postcard_output = os.path.join(postcard_output_directory, f'postcard_{name}.pdf')
     postcard_pdf.output(postcard_output)
@@ -61,8 +62,8 @@ for name in names_df['Name']:
     # Generate folding card
     folding_card_pdf = FPDF(unit="mm", format="A5")
     folding_card_pdf.add_page()
+    folding_card_pdf.add_page()  # Second page image
     folding_card_pdf.image(image_path, x=0, y=0, w=A5_WIDTH_IN_MM, h=A5_HEIGHT_IN_MM)
-    folding_card_pdf.add_page()  # Second blank page
     folding_card_pdf.add_page()  # Third blank page
     folding_card_pdf.add_page()  # Greetings page
     # Add greeting text
